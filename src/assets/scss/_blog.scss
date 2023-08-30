@@ -1,0 +1,48 @@
+
+
+.blog-box{
+    border: none;
+    box-shadow: $box-shadow;
+    .blog-img{
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        img {
+            transition: all 0.5s ease;
+        }
+        .blog-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $primary;
+            padding: 5px 10px;
+            color:$white;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            background-color: rgba($secondary, 0.0);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.5s ease;
+        }
+    }
+    &:hover{
+        .blog-img {
+            img{
+                transform: scale(1.1);
+            }
+            .blog-tag {
+                left: 24px;
+            }
+            &::after {
+                background-color: rgba($secondary, 0.45);
+            }
+        }
+    }
+}

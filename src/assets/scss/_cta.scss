@@ -1,0 +1,94 @@
+//
+//cts.scss
+//
+.subscribe-form {
+    input {
+        padding: 14px 20px;
+        width: 100%;
+        font-size: 16px;
+        color: $dark;
+        border: none;
+        outline: none;
+        padding-right: 155px;
+        padding-left: 30px;
+        border-radius: 30px;
+        box-shadow: 0 3px 8px rgba($dark, 0.1);
+    }
+
+    .btn {
+        position: absolute;
+        right: 0px;
+        outline: none;
+        border-radius: 30px;
+        padding: 13px 38px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .cta-img {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba($dark, 0.07);
+            right: -40px;
+            width: 60px;
+            height: 2px;
+            top: 50%;
+        }
+    }
+}
+
+//
+//counter.scss
+//
+
+.counter-box {
+    .counter-icon {
+        background: rgba($white, 0.03);
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        line-height: 100px;
+        text-align: center;
+        font-size: 46px;
+        margin: 0 auto;
+        box-shadow: 0 3px 0px rgba($white, 0.2);
+    }
+}
+
+p .counters {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.counter {
+    letter-spacing: 0.125rem;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    height: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    &>span {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: transform 2s ease;
+        transform: translateY(0);
+        line-height: 1;
+
+        span {
+            flex: 0 0 100%;
+            height: 100%;
+        }
+    }
+}

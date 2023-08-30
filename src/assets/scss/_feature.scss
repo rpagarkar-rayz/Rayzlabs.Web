@@ -1,0 +1,29 @@
+
+
+
+
+.features-box {
+    .features-icon {
+        background: $primary;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: $white;
+        border-radius: 6px;
+        font-size: 30px;
+        position: relative;
+        &::before {
+            content: "";
+            height: 60px;
+            width: 60px;
+            background: rgba($primary,0.1);
+            position: absolute;
+            left: 7px;
+            top: -16px;
+            transform: rotate(20deg);
+            z-index: -1;
+            border-radius: 6px;
+        }
+    }
+}

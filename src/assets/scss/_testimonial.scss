@@ -1,0 +1,47 @@
+.testi-box {
+    .testi-content {
+        padding: 30px;
+        box-shadow: 2px 2px 10px rgba($dark, 0.08);
+        border-radius: 6px;
+        position: relative;
+        background-color: $white;
+
+        &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            position: absolute;
+            bottom: -10px;
+            left: 20%;
+            transform: rotate(45deg);
+            box-shadow: 16px 14px 17px rgba($dark, 0.08);
+        }
+    }
+
+    .testi-user {
+        img {
+            height: 48px;
+            width: 48px;
+        }
+    }
+}
+
+.testi-slider {
+    .swiper-pagination-bullets {
+        bottom: -10px;
+
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 5px;
+            border: none;
+            background-color: rgba($primary, 0.8);
+            margin: 5px 7px;
+            border-radius: 20px;
+
+            &.swiper-pagination-bullet-active {
+                background-color: $primary;
+            }
+        }
+    }
+}

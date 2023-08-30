@@ -1,0 +1,89 @@
+<app-preloader></app-preloader>
+
+        <!-- STRAT NAVBAR -->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top sticky" (window:scroll)="windowScroll()">
+            <div class="container">
+                <a class="navbar-brand" routerLink="/index6">
+                    <img src="assets/images/logo-light.png" alt="logo" height="24" class="logo-light" />
+                    <img src="assets/images/logo-dark.png" alt="logo" height="24" class="logo-dark" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+                <!--end button-->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul id="navbar-navlist" class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#home'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'home'}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#services'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'services'}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#about'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'about'}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#features'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'features'}">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#team'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'team'}">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#blog'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'blog'}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [ngxScrollTo]="'#contact'" href="javascript: void(0);" class="nav-link" [ngClass]="{'active':currentSection === 'contact'}">Contact</a>
+                        </li>
+                    </ul>
+                    <!--end navbar nav-->
+                    <div class="phone-call ms-2 mb-3 mb-lg-0">
+                        <a href="javascript:void(0);" class="nav-link"><i class="mdi mdi-phone me-1"></i> +00 1234 5678 90</a>
+                    </div>
+                </div>
+                <!--end collapse-->
+            </div>
+            <!--end container-->
+        </nav>
+        <!-- END NAVBAR -->
+
+<!-- Hero Start -->
+<section class="bg-home6" id="home">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="position-relative" style="z-index:1;">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div>
+                        <div class="mb-4">
+                            <i class="mdi mdi-axis-arrow mdi-spin text-white h2"></i>
+                        </div>
+                        <h1 class="text-white mb-4">Simple Project Management Tools for Setup!</h1>
+                        <p class="text-white-50 fs-17">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
+                        <button class="btn btn-primary mt-4">Learn More <span class="ms-2 right-icon">&#8594;</span></button>
+                    </div>
+                </div>
+                <!--end col-->
+                <div class="col-lg-6">
+                    <div class="mt-4 mt-lg-0">
+                        <iframe src="https://player.vimeo.com/video/69988283?color=f15b72&amp;title=0&amp;byline=0&amp;portrait=0" width="555" height="321" class="frame-border"></iframe>
+                    </div>
+                </div><!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <ng-particles [id]="id" [options]="particlesOptions"></ng-particles>
+    </div>
+    <!--end container-->
+</section>
+<!-- Hero End -->
+
+<div appScrollspy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+    <app-service></app-service>
+    <app-about></app-about>
+    <app-features></app-features>
+    <app-team></app-team>
+    <app-blog></app-blog>
+    <app-contact></app-contact>
+    <app-footer></app-footer>
+</div>

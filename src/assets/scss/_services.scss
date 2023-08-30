@@ -1,0 +1,81 @@
+/* 
+// 07. Services
+*/
+
+.service-box {
+    padding: 28px 29px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+
+    .service-icon {
+        font-size: 44px;
+        color: $primary;
+    }
+
+    .service-content {
+        p {
+            color: $muted;
+        }
+
+        a {
+            color: $primary;
+        }
+    }
+
+    &:before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 10%;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $white;
+
+        .service-icon {
+            color: $white;
+        }
+
+        .service-content {
+            color: $white;
+
+            p {
+                color: rgba($white, 0.7);
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        &:before {
+            height: 100%;
+            width: 100%;
+            background-color: $primary;
+        }
+    }
+}
+
+.right-icon {
+    line-height: 0;
+    font-size: 22px;
+}
+

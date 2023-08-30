@@ -1,0 +1,140 @@
+//
+// menu.scss
+//
+
+.navbar {
+    transition: all 0.5s ease;
+    padding: 20px 0px;
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $gray-600;
+                font-size: 13px;
+                letter-spacing: 0.05rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                background-color: transparent;
+                margin: 0px 6px;
+                transition: all 0.3s ease;
+                font-family: $font-family-base;
+
+                &:hover,
+                &:active,
+                &.active {
+                    color: $secondary !important;
+                }
+            }
+        }
+    }
+
+    .phone-call {
+        .nav-link {
+            color: $primary;
+        }
+    }
+
+    .navbar-toggler {
+        padding: 0px;
+        border: none;
+        font-size: 24px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .navbar-brand {
+        .logo-light {
+            display: inline-block;
+        }
+
+        .logo-dark {
+            display: none;
+        }
+        @media (max-width: 991.98px) {
+            .logo-light {
+                display: none;
+            }
+            .logo-dark {
+                display: block;
+            }
+        }
+    }
+   
+}
+
+//nav-sticy
+.nav-sticky {
+    &.navbar {
+        background: $white;
+        padding: 15px 0px;
+        margin-top: 0px;
+        box-shadow: 0px 3px 10px 0px rgba($dark, 0.08);
+    }
+
+    .navbar-brand {
+        .logo-dark {
+            display: inline-block;
+        }
+
+        .logo-light {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-light {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: rgba($white, 0.7);
+                    font-family: $font-family-base;
+
+                    &:hover,
+                    &:active,
+                    &.active {
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+
+        .phone-call {
+            .nav-link {
+                color: $white;
+            }
+        }
+    }
+
+    .nav-sticky {
+        &.navbar-light {
+            background: $white;
+
+            .nav-item {
+                .nav-link {
+                    color: $dark;
+
+                    &:hover,
+                    &.active,
+                    &:active {
+                        color: $secondary !important;
+                    }
+                }
+            }
+
+            .phone-call {
+                .nav-link {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 12px 0px;
+        background-color: $white;
+    }
+}

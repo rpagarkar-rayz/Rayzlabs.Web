@@ -1,0 +1,137 @@
+/* 
+// 06. Hero
+*/
+
+.bg-home {
+  padding: 180px 0;
+  background-color: rgba($primary, 0.05);
+  @media (max-width: 991.98px) {
+    padding: 140px 0 95px;
+  }
+}
+
+.home-center {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.home-desc-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+//Home-2
+
+.bg-home2 {
+  padding: 180px 0 150px 0;
+  background: linear-gradient(135deg, #2558ab, #11b9e8 100%);
+  .bg-overlay {
+    background: url("../images/home/home2-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.home-content {
+  position: relative;
+  z-index: 1;
+}
+
+//home-3
+
+.bg-home3 {
+  padding-top: 168px;
+  position: relative;
+  background-color: $primary;
+  .bg-overlay {
+    background: url("../images/home/home3-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+//home-4
+.bg-home4 {
+  padding: 230px 0 215px 0;
+  background: $light;
+  @media (max-width: 991.98px) {
+    padding: 170px 0 95px 0;
+  }
+  .bg-overlay {
+    background: url("../images/home/home4-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+//home-5
+
+.bg-home5 {
+  .bg-overlay {
+    background-image: linear-gradient(
+      90deg,
+      rgba($black, 0.5) 30%,
+      transparent
+    );
+  }
+}
+
+.hero-slider {
+  height: 100vh;
+  .swiper-slide {
+    font-size: 18px;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 30px;
+    background-color: $white;
+    border-radius: 5px;
+    &.swiper-pagination-bullet-active {
+      background-color: $secondary;
+    }
+  }
+}
+
+// home-6
+
+.bg-home6 {
+  position: relative;
+  padding: 280px 0 260px 0;
+  background-image: url("../images/home/home-6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: 767.98px) {
+    padding: 225px 0 220px 0;
+  }
+  .bg-overlay {
+    background-color: rgba($black, 0.7);
+  }
+}
+
+iframe {
+  max-width: 100%;
+  border: 9px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+ng-particles{
+  canvas{
+    background-color: transparent !important;
+  }
+}
