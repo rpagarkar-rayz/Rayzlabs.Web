@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { RaysService } from '../../service/rays.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  providers :[RaysService]
 })
 export class ContactComponent {
-
   submit!: boolean;
   contactform!: UntypedFormGroup;
 
-  constructor(private formBuilder: UntypedFormBuilder) { }
+  constructor(private formBuilder: UntypedFormBuilder,
+   private raysService: RaysService ) { }
 
   ngOnInit(): void {
     /**
@@ -58,8 +60,12 @@ export class ContactComponent {
   }
 
   submitForm() {
+    console.log('submitForm');
     if (this.validSubmit()) {
-      
+      this.raysService.sendContactEmail().subscribe(res =>
+        {
+          
+        });
     }
   }
 }
