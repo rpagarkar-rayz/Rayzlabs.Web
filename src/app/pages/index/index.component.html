@@ -2,10 +2,10 @@
 <app-preloader></app-preloader>
 <!-- STRAT NAVBAR -->
 <nav id="navbar" class="navbar navbar-expand-lg fixed-top sticky" (window:scroll)="windowScroll()">
-    <div class="container">
+    <div class="container" style="max-width:1640px !important;">
         <a class="navbar-brand" routerLink="/index">
-            <img src="assets/images/logo-dark.png" alt="logo" height="24" class="logo-light" />
-            <img src="assets/images/logo-dark.png" alt="logo" height="24" class="logo-dark" />
+            <img src="assets/images/PNG-01.png" alt="logo" height="100" class="logo-light" />
+            <img src="assets/images/PNG-01.png" alt="logo" height="100" class="logo-dark" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
@@ -51,14 +51,16 @@
       <section class="bg-home" id="home">
         <div class="home-center" id="home">
             <div class="home-desc-center">
-                <div class="container">
-                    <div class="row align-items-center">
+                <div class="container" style="max-width:1640px !important;">
+                    <div class="row align-items-">
                         <div class="col-lg-5">
                             <div class="pe-lg-4">
                                 <h6 class="text-uppercase text-secondary f-14 mb-4 fw-bold">Who We Are</h6>
                                 <h2 class="mb-4">Evolve Analytics into Wisdom with <span
-                                        class="text-secondary fw-medium">Rayzlabs</span></h2>
-                                <p class="text-muted fs-17 mb-4 pb-2">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
+                                        class="text-secondary fw-medium">Rayzlabs</span></h2>                                
+                                <p class="text-muted fs-17 mb-4 pb-2">
+                                    At Rayzlabs, our core mission is to empower a multitude of industries by providing cutting-edge data analytics solutions. We understand that data is the lifeblood of modern business and that harnessing its potential is essential for staying competitive and thriving in today's rapidly evolving landscape.
+                                </p>
                                 <a href="" class="btn btn-primary">Find Out How <span class="ms-2 right-icon">&#8594;</span></a>
                             </div>
                         </div>

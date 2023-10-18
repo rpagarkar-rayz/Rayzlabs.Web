@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RaysService } from './service/rays.service'; 
+import { RayzService } from './service/rays.service'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { RaysService } from './service/rays.service';
     AppRoutingModule,
     BrowserAnimationsModule,  // Add this only in the root module
   ],
-  providers: [RaysService],
+  providers: [RayzService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
