@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RayzService } from './service/rays.service'; 
+import { RayzService } from './service/rayz.service'; 
 
 @NgModule({
   declarations: [

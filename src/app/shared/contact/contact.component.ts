@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { RayzService } from '../../service/rays.service';
+import { RayzService } from '../../service/rayz.service';
 
 @Component({
   selector: 'app-contact',
