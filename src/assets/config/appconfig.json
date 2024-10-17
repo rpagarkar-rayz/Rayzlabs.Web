@@ -1,0 +1,4 @@
+{
+  "API_HOST": "http://localhost:7182/",
+  "CONTACT_US": "api/Rayz/SendContactEmail"
+}

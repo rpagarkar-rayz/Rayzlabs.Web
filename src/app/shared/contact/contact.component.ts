@@ -11,7 +11,7 @@ import { RayzService } from '../../service/rayz.service';
 export class ContactComponent {
   submit!: boolean;
   contactform!: UntypedFormGroup;
-
+  public resultMessage = '';
   constructor(private formBuilder: UntypedFormBuilder,
    private rayzService: RayzService ) { }
 
@@ -65,10 +65,26 @@ export class ContactComponent {
       var email =  this.contactform.get("email")!.value;
       var subject = this.contactform.get("subject")!.value;
       var message = this.contactform.get("message")!.value;
-      this.rayzService.sendContactEmail(name, email, subject, message).subscribe(res =>
+       this.rayzService.sendContactEmail(name, email, subject, message).subscribe(res =>
         {
-          
+           this.clearForm();
+           this.resultMessage = "Message Sent!";
+        }); 
+
+        /* this.rayzService.sendContactEmail(name, email, subject, message).then((result: any) => {
+          if (result) {
+          }
         });
+ */
     }
   }
+  clearForm() {
+
+    this.contactform.reset({
+          'name': '',
+          'email': '',
+          'subject': '',
+          'message': ''
+         });
+    }
 }
